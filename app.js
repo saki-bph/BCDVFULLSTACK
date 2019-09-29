@@ -13,7 +13,10 @@ function getPokemonInfo(pokemon){
   for (var i = 0; i < pokemon.types.length; i++) {
     typeList[i] = pokemon.types[i].type.name;
   }
-  type.innerHTML = typeList;
+  if(typeList.length < 2){
+    typeList[1] = "";
+  }
+  type.innerHTML = typeList[0] + " " +typeList[1];
 }
 function findPokemon(){
 
