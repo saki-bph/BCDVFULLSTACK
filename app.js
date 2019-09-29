@@ -1,17 +1,13 @@
 const search = document.getElementById("searchbutton");
-const sprite = document.getElementById("sprite");
+const sprite = document.getElementById("pokemon");
 search.addEventListener('click', function(event){
   event.preventDefault();
   findPokemon();
 });
 
 function getPokemonSprite(picture){
-  let newDiv = document.createElement("div");
-  let pic = document.createElement("img");
-  pic.src = picture;
+  sprite.src = picture;
   //pic.setAttribute("src",picture);
-  newDiv.appendChild(pic);
-  sprite.appendChild(newDiv);
 }
 function findPokemon(){
 
