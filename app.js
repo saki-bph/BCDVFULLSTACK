@@ -39,7 +39,7 @@ function getPokemonInfo(pokemon, weaklist){
 
 function findPokemon(){
 
-  const query = document.getElementById("searchbox").value;
+  const query = document.getElementById("searchbox").value.toLowerCase();
   fetch('https://pokeapi.co/api/v2/pokemon/' + query)
     .then(function(response){
       let newData = response.json()
