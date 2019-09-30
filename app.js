@@ -2,8 +2,10 @@ const search = document.getElementById("searchbutton");
 const sprite = document.getElementById("pokemon");
 const type = document.getElementById("type");
 const weakness = document.getElementById("weakness");
+const card = document.getElementById("sprite");
 search.addEventListener('click', function(event){
   event.preventDefault();
+  card.style.visibility = "visible";
   findPokemon();
 });
 function findWeakness(pokemon){
@@ -21,7 +23,6 @@ function findWeakness(pokemon){
 }
 
 function getPokemonInfo(pokemon, weaklist){
-  console.log(weaklist);
   sprite.src = pokemon.sprites.front_default;
   let typeList = [];
   for (var i = 0; i < pokemon.types.length; i++) {
@@ -31,9 +32,7 @@ function getPokemonInfo(pokemon, weaklist){
     typeList[1] = "";
   }
   type.innerHTML = typeList[0] + " " +typeList[1];
-  for (var i = 0; i < weaklist.length; i++) {
-    weakness.appendChild = weaklist[i].name;
-  }
+    weakness.innerHTML = weaklist[0].name;
 
 }
 
