@@ -1,0 +1,9 @@
+.card {
+        visibility: hidden;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 10 px;
+}
+.background{
+        background-color: red;
+}
